@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Links</title>
+</head>
+<body>
+<style>
+ul{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+.nav_float li{
+float: left;
+border-right: 3px solid red;
+padding: 5px 10px 10px 10px;
+}
+.nav_float li:last-child{
+border-right: none;
+}
+.nav_inline li{
+display: inline-block;
+padding: 5px 0 10px 10px;
+}
+.nav_inline li:after{
+content: "|"; color: red;
+font-size: 40px;
+font-weight: bold;
+position: relative;
+top: 3px;
+left: 7px;
+}
+.nav_inline li:last-child:after{
+content: none;
+}
+td{
+padding: 7px 8px 10px 10px;
+border-left: 3px solid red;
+
+}
+td:first-child{
+border-left: none;
+padding: 7px 8px 10px 8px;
+}
+
+
+</style>
+	<div class="nav_float"> <!- Я решил расположить ссылки слева направа используя плавающие элементы float, красные разделители 
+		решил сделать правой границей border-right, в последней ячейке я границу убрал селектором псевдокласов :last-child ->
+		<ul>
+			<li><a href="">Первая ссылка</a></li>
+			<li><a href="">Вторая ссылка</a></li>
+			<li><a href="">Третья ссылка</a></li>
+			<li><a href="">Четвертая ссылка</a></li>
+			<li><a href="">Пятая ссылка</a></li>
+		</ul>
+	</div>
+<br><br>
+	<div class="nav_inline"><!- Я решил расположить ссылки слева направа используя block-inline, красные разделители решил сделать 
+		селектором псевдоэлементов ::after, в последней ячейке я рамку убрал селектором псевдокласов :last-child ->
+		<ul>
+			<li><a href="">Первая ссылка</a></li>
+			<li><a href="">Вторая ссылка</a></li>
+			<li><a href="">Третья ссылка</a></li>
+			<li><a href="">Четвертая ссылка</a></li>
+			<li><a href="">Пятая ссылка</a></li>
+		</ul>
+	</div>
+<br>
+	<div class="nav_table"><!- Я решил расположить ссылки слева направа используя таблицу, красные разделители решил сделать левой
+	 границей border-right, в первой ячейке я рамку убрал селектором псевдокласов :first-child ->
+		<table>
+			<tr>
+				<td><a href="">Первая ссылка</a></td>
+				<td><a href="">Вторая ссылка</a></td>
+				<td><a href="">Третья ссылка</a></td>
+				<td><a href="">Четвертая ссылка</a></td>
+				<td><a href="">Пятая ссылка</a></td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+</html>
