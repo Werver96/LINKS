@@ -7,27 +7,33 @@
 </head>
 <body>
 <style>
-a:hover{
+div.sposob1_float a:hover{
 color:red;
 }
-ul{
-list-style: none;
-margin: 0;
-padding: 0;
-}
-.nav_float li{
+div.sposob1_float li{
 float: left;
 border-right: 3px solid red;
 padding: 5px 10px 10px 10px;
 }
-.nav_float li:last-child{
-border-right: none;
+div.sposob1_float li:last-child{
+border-right: none
 }
-.nav_inline li{
+div.sposob1_float ul{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+div.sposob2_inline a:hover{
+color:red;
+}
+div.sposob2_inline li{
 display: inline-block;
 padding: 5px 0 10px 10px;
 }
-.nav_inline li:after{
+div.sposob2_inline ul{
+padding: 0;
+}
+div.sposob2_inline li:after{
 content: "|"; color: red;
 font-size: 40px;
 font-weight: bold;
@@ -35,22 +41,23 @@ position: relative;
 top: 3px;
 left: 7px;
 }
-.nav_inline li:last-child:after{
+div.sposob2_inline li:last-child:after{
 content: none;
 }
-td{
+div.sposob3_table a:hover{
+color:red;
+}
+div.sposob3_table td{
 padding: 7px 8px 10px 10px;
 border-left: 3px solid red;
-
 }
-td:first-child{
+div.sposob3_table td:first-child{
 border-left: none;
 padding: 7px 8px 10px 8px;
 }
 
-
 </style>
-	<div class="nav_float"> <!- Я решил расположить ссылки слева направа используя плавающие элементы float, красные разделители 
+	<div class="sposob1_float"> <!- Я решил расположить ссылки слева направа используя плавающие элементы float, красные разделители 
 		решил сделать правой границей border-right, в последней ячейке я границу убрал селектором псевдокласов :last-child ->
 		<ul>
 			<li><a href="">Первая ссылка</a></li>
@@ -61,7 +68,7 @@ padding: 7px 8px 10px 8px;
 		</ul>
 	</div>
 <br><br>
-	<div class="nav_inline"><!- Я решил расположить ссылки слева направа используя block-inline, красные разделители решил сделать 
+	<div class="sposob2_inline"><!- Я решил расположить ссылки слева направа используя block-inline, красные разделители решил сделать 
 		селектором псевдоэлементов ::after, в последней ячейке я рамку убрал селектором псевдокласов :last-child ->
 		<ul>
 			<li><a href="">Первая ссылка</a></li>
@@ -72,7 +79,7 @@ padding: 7px 8px 10px 8px;
 		</ul>
 	</div>
 <br>
-	<div class="nav_table"><!- Я решил расположить ссылки слева направа используя таблицу, красные разделители решил сделать левой
+	<div class="sposob3_table"><!- Я решил расположить ссылки слева направа используя таблицу, красные разделители решил сделать левой
 	 границей border-right, в первой ячейке я рамку убрал селектором псевдокласов :first-child ->
 		<table>
 			<tr>
